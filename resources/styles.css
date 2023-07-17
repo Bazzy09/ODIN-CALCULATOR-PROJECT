@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.btn{
+    height: 75px;
+    width: 75px;
+    margin: 15px;
+    font-size: 40px;
+    
+}
+
+.number{
+    border: 1px solid seagreen;
+    border-radius: 10px;
+}
+
+.number:hover{
+    background-color: aqua;
+}
+
+.operator{
+    border: solid skyblue;
+    border-radius: 1opx;
+}
+
+.operator:hover{
+    background-color: aqua;
+}
+
+.decimal{
+    border: solid purple;
+    border-radius: 1opx;
+}
+
+.decimal:hover{
+    background-color: plum;
+}
+
+.equal{
+    border: solid orangered;
+    border-radius: 1opx;
+}
+
+.equal:hover{
+    background-color: violet;
+}
+
+#clear-btn{
+    border: solid red;
+    border-radius: 1opx
+}
+
+#clear-btn{
+    background-color: white;
+}
+
+.first-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#screen{
+    width: 300px;
+    border: 1px solid saddlebrown;
+    height: 75px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.previous{
+    font-size: 20px;
+}
+
+.current{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
