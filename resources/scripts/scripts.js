@@ -2,25 +2,25 @@ let operator = '';
 let previousValue = '';
 let currentValue = '';
 
-document.addEventListener("DOMcontentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){
     let clear = document.querySelector("#clear-btn");
     let equal = document.querySelector(".equal");
     let decimal = document.querySelector(".decimal");
     
     let numbers = document.querySelectorAll(".number");
-    let operators = document.querryselectorAll(".operators");
+    let operators = document.querySelectorAll(".operator"); // Fixed typo in "querySelectorAll"
     
     let previousScreen = document.querySelector(".previous");
     let currentScreen = document.querySelector(".current")
 
     numbers.forEach((number) => number.addEventListener("click", function (e){
-        handleNumber(e.target.textContent)
-        currentScreen.textContent = currentValue
+        handleNumber(e.target.textContent);
+        currentScreen.textContent = currentValue;
     }))
 
-    operators.forEach((op) => op.addEventListener("click", function(){
-        handleOperator(e.target.textContent)
-        previousScreen.textContent = previousValue + " " + operator
+    operators.forEach((op) => op.addEventListener("click", function(e){ // Fixed parameter name "e"
+        handleOperator(op.textContent);
+        previousScreen.textContent = previousValue + " " + operator;
         currentScreen.textContent = currentValue;
     }))
 
@@ -29,25 +29,26 @@ document.addEventListener("DOMcontentLoaded", function(){
         currentValue = '';
         operator = '';
         previousScreen.textContent = currentValue;
-        currentScreen.textContent = currentValue
+        currentScreen.textContent = currentValue;
     })
 
     equal.addEventListener("click", function(){
-        if(currentValue != '' && previousValue != ''){
-            calculate()
+        if(currentValue !== '' && previousValue !== ''){
+            calculate();
             previousScreen.textContent = '';
             if(previousValue.length <= 5){
                 currentScreen.textContent = previousValue;
-            } else{
+            } else {
                 currentScreen.textContent = previousValue.slice(0,5) + "...";
             }
         }
     }) 
     
     decimal.addEventListener("click", function(){
-        addDecimal()
-    })
-})
+        addDecimal();
+        currentScreen.textContent = currentValue;
+    });
+});
 
 function handleNumber(num){
     if(currentValue.length <= 5){
@@ -71,7 +72,7 @@ function calculate(){
         previousValue -= currentValue;
     } else if(operator === "*"){
         previousValue *= currentValue;
-    } else{
+    } else {
         previousValue /= currentValue;
     }
 
@@ -85,15 +86,7 @@ function roundNumber(num){
 }
 
 function addDecimal(){
-  if(!currentValue.includes(".0")){
-    currentValue += '.';
-  }  
+    if(!currentValue.includes(".")){
+        currentValue += '.';
+    }
 }
-
-
-
-
-
-
-
-
