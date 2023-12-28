@@ -5,57 +5,62 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-}
-.btn{
-    height: 75px;
-    width: 75px;
-    margin: 15px;
-    font-size: 40px;
-    
+    margin: 0;
+    background-color: #f0f0f0; 
 }
 
-.number{
+.btn {
+    height: 75px;
+    width: 75px;
+    margin: 5px; 
+    font-size: 40px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s; 
+}
+
+.btn:hover {
+    background-color: #eee; 
+}
+
+.number {
     border: 1px solid seagreen;
     border-radius: 10px;
 }
 
-.number:hover{
+.number:hover {
     background-color: aqua;
 }
 
-.operator{
-    border: solid skyblue;
-    border-radius: 1opx;
+.operator {
+    border: 1px solid skyblue;
+    border-radius: 10px;
 }
 
-.operator:hover{
+.operator:hover {
     background-color: aqua;
 }
 
-.decimal{
-    border: solid purple;
-    border-radius: 1opx;
+.decimal {
+    border: 1px solid purple;
+    border-radius: 10px;
 }
 
-.decimal:hover{
+.btn-decimal:hover {
     background-color: plum;
 }
 
-.equal{
-    border: solid orangered;
-    border-radius: 1opx;
+.equal {
+    border: 1px solid orangered;
+    border-radius: 10px;
 }
 
-.equal:hover{
+.equal:hover {
     background-color: violet;
 }
 
-#clear-btn{
-    border: solid red;
-    border-radius: 1opx
-}
-
-#clear-btn{
+#clear-btn {
+    border: 1px solid red;
+    border-radius: 10px;
     background-color: white;
 }
 
@@ -66,7 +71,7 @@ body {
     flex-direction: row;
 }
 
-#screen{
+#screen {
     width: 300px;
     border: 1px solid saddlebrown;
     height: 75px;
@@ -75,29 +80,12 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-
 }
 
-.previous{
+.previous {
     font-size: 20px;
 }
 
-.current{
+.current {
     font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
